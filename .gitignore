@@ -1,0 +1,6 @@
+.idea/
+node_modules/
+sandbox/
+dist/
+data-db/
+config.json
