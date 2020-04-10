@@ -3,4 +3,3 @@ sandbox/
 dist/
 .git/
 .gitignore
-config.json

@@ -1,5 +1,6 @@
 import * as React from "react";
 import axios, { AxiosResponse } from "axios";
+import config from "../../../config";
 
 export default class RomanNumeralConverter extends React.Component<object, { toFromToggle: boolean }> {
 
@@ -34,7 +35,7 @@ export default class RomanNumeralConverter extends React.Component<object, { toF
         const from = this.state.toFromToggle ? "roman" : "arabic";
         const inputValue = this.state.inputValue;
 
-        axios.get("http://localhost:8080/" + from + "/" + inputValue)
+        axios.get(config.romanNumeralService.apiEndpoint + "/" + from + "/" + inputValue)
             .then((response: AxiosResponse) => {
 
                 this.setState(state => ({
